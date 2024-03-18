@@ -5,3 +5,8 @@ df = pd.read_csv('C:\Users\Dell\Desktop\cours S2\comput_tools\current_dataset.cs
 df_cleaned = df.drop(index=0)
 df_cleaned.reset_index(drop=True, inplace=True)
 df_cleaned
+
+
+# Extract transformation codes
+transformation_codes = df.iloc[0, 1:].to_frame().reset_index()
+transformation_codes.columns = ['Series', 'Transformation_Code']
