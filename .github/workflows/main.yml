@@ -1,0 +1,7 @@
+import pandas as pd
+# Load the dataset
+df = pd.read_csv('C:\Users\Dell\Desktop\cours S2\comput_tools\current_dataset.csv')
+# Clean the DataFrame by removing the row with transformation codes
+df_cleaned = df.drop(index=0)
+df_cleaned.reset_index(drop=True, inplace=True)
+df_cleaned
